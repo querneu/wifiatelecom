@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Web Authentication</title>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" src="files/js/servicescript41.js"></script>
+    <script>
+        function getErrorMsgIfAny() {
+            if (document.forms[0].err_flag.value == 1) {
+                document.writeln('Usuário ou senha incorretos');
+            } else {
+                document.writeln(' ');
+            }
+        }
+
+        function unhideform() {
+            document.getElementById("formId").style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post">
+        <input type="hidden" name="buttonClicked" size="16" maxlength="15" value="0">
+        <input type="hidden" name="err_flag" size="16" maxlength="15" value="0">
+        <input type="hidden" name="err_msg" size="32" maxlength="31" value="">
+        <input type="hidden" name="info_flag" size="16" maxlength="15" value="0">
+        <input type="hidden" name="info_msg" size="32" maxlength="31" value="">
+        <input type="hidden" name="redirect_url" size="255" maxlength="255" value="">
+        <input type="hidden" name="network_name" size="64" maxlength="64" value="Guest Network">
+        <div id="formId">
+            <!--div header-->
+            <h1>A.TELECOM POC</h1>
+            <div align="right"><img src="./files/cisco-webauth-logo-2007.gif" width="67" height="40"></div>
+            <div class="content"> CAMARA POC Realize o login para acessar a internet.
+                <script>
+                    getErrorMsgIfAny();
+                </script>
+                <p>CPF</p>
+                <input type="text" name="username">
+                <p>Senha</p>
+                <input type="Password" name="password" emweb_type="PASSWORD" autocomplete="off" onkeypress="submitOnEnter(event);">
+                <script>
+                    getHtmlForButton("Submit", "Submit", "button", "submitAction()");
+                </script>
+            </div>
+        </div>
+        <div id="newLoginWebConsent">
+            <p id="welcomeMsg">
+            </p>
+            <div>
+                <div id="content">
+                    <div id="page1">
+                        <p>
+                            <h1>Rede Guest</h1>
+                        </p>
+                        <br><br><br><br>
+                        <button class="" type="button" id="loginConnectButton" onclick="submitAction();" disabled=""> Connect </button>s
+                    </div>
+                    <div id="page2" style='display: none'> Este serviço é de uso direcionado para convidados autorizados neste estabelecimento. Esta é uma rede sem fio desprotegita/aberta. Ao usar este serviço, convidados entendem e aceitam que é de própria responsabilidade proteget o próprio
+                        computador enquanto conectado neste serviço. <br><br>
+                        <button class="" type="button" id="loginAcceptButton" onclick="show_accept_terms();"> Retornar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

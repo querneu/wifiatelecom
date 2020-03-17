@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Acesso Wifi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="./files/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="./files/css/custom.css" rel="stylesheet" id="bootstrap-css">
+    <script src=./files/js/servicescript41.js></script>
+</head>
+
+<body>
+    <form method="POST" class="lock-form">
+        <input type="hidden" name="buttonClicked" size="16" maxlength="15" value="0">
+        <input type="hidden" name="err_flag" size="16" maxlength="15" value="0">
+        <input type="hidden" name="err_msg" size="32" maxlength="31" value="">
+        <input type="hidden" name="info_flag" size="16" maxlength="15" value="0">
+        <input type="hidden" name="info_msg" size="32" maxlength="31" value="">
+        <input type="hidden" name="redirect_url" size="255" maxlength="255" value="">
+        <input type="hidden" name="network_name" size="64" maxlength="64" value="Guest Network">
+        <div class="container">
+            <div class="page-lock justify-content-center">
+                <div class="page-logo text-white col-md-4 offset-md-4">
+                    <img src="./files/img/logo.png" class="figure-img img-fluid rounded mx-auto d-block">
+                    </a>
+                </div>
+                <div class="page-body text-white">
+                    <div class="lock-head text-white">Acesso WIFI </div>
+                    <div class="lock-body">
+                        <div class="pull-left lock-avatar-block text-white">
+                            <img src="./files/img/avatar.png" class="figure-img img-fluid rounded mx-auto d-block">
+                        </div>
+                        <form class="lock-form" action="../../index.html" method="post">
+                            <div class="form-group">
+                                <input class="form-control text-white" maxlength="14" type="text" autocomplete="off" placeholder="Login" name="username"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control text-white" type="password" autocomplete="off" placeholder="Password" name="password" />
+                            </div>
+                            <div class="form-actions">
+                                <script>
+                                    getHtmlForButton("Submit", "Submit", "btn btn-success uppercase", "submitAction()");
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="lock-bottom text-white" >
+                        <a href="https://visitantes.camara.leg.br/visitantes/cadastro.html">FAÇA SEU CADASTRO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+    <center>
+        <strong class="text-white">Criado por <a href="http://github.com/querneu"
+                target="_blank">Lucas Soares</a></strong>
+    </center>
+    <br>
+    <br>
+</body>
+
+</html>
